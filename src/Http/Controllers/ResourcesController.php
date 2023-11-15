@@ -9,9 +9,9 @@ class ResourcesController extends CpController
 {
     public function __invoke()
     {        
-        if (! User::current()->can('view '.strtolower(config('thoughtco.client-dashboard.nav.title')))) {
-            abort(403);
-        }
+        // if (! User::current()->can('view steadfast resources')) {
+        //     abort(403);
+        // }
 
         return view('statamic-cpresources::index', [
             'trelloUrl' => config('client-dashboard.trello_url'),

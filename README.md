@@ -16,7 +16,7 @@ Run the following commands from your project root:
 
 ```bash
 composer require thoughtco/statamic-cpresources
-php artisan vendor:publish --tag=statamic-cp-resources-config
+php artisan vendor:publish --tag=client-dashboard-config
 ```
 
 ## How to Use
