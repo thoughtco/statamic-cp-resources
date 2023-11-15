@@ -13,10 +13,10 @@ class ResourcesController extends CpController
             abort(403);
         }
 
-        return view('statamic-cp-resources::index', [
-            'trelloUrl' => config('statamic-cp-resources.trello_url'),
-            'looms' => config('statamic-cp-resources.looms'),
-            'additionalResources' => config('statamic-cp-resources.additional_resources'),
+        return view('statamic-cpresources::index', [
+            'trelloUrl' => config('statamic-cpresources.trello_url'),
+            'looms' => config('statamic-cpresources.looms'),
+            'additionalResources' => config('statamic-cpresources.additional_resources'),
         ]);
     }
 }

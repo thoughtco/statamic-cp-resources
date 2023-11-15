@@ -1,8 +1,8 @@
 {
-    "name": "steadfast-collective/statamic-cp-resources",
+    "name": "thoughtco/statamic-cp-resources",
     "autoload": {
         "psr-4": {
-            "SteadfastCollective\\StatamicCpResources\\": "src"
+            "ThoughtCo\\StatamicCpResources\\": "src"
         }
     },
     "extra": {
@@ -12,7 +12,7 @@
         },
         "laravel": {
             "providers": [
-                "SteadfastCollective\\StatamicCpResources\\ServiceProvider"
+                "ThoughtCo\\StatamicCpResources\\ServiceProvider"
             ]
         }
     },
