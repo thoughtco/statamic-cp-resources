@@ -1,0 +1,27 @@
+{
+    "name": "steadfast-collective/statamic-cp-resources",
+    "autoload": {
+        "psr-4": {
+            "SteadfastCollective\\StatamicCpResources\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Statamic CP Resources",
+            "description": "Provides a helpful 'Resources' page in the Control Panel for clients."
+        },
+        "laravel": {
+            "providers": [
+                "SteadfastCollective\\StatamicCpResources\\ServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "statamic/cms": "^3.3|^4.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    }
+}
