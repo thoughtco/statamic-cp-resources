@@ -1,27 +1,19 @@
 {
-    "name": "thoughtco/statamic-cp-resources",
+    "name": "thoughtco/statamic-cpresources",
     "autoload": {
         "psr-4": {
-            "ThoughtCo\\StatamicCpResources\\": "src"
+            "Thoughtco\\StatamicCpresources\\": "src"
         }
     },
     "extra": {
         "statamic": {
-            "name": "Statamic CP Resources",
-            "description": "Provides a helpful 'Resources' page in the Control Panel for clients."
+            "name": "Statamic Cpresources",
+            "description": "Statamic Cpresources addon"
         },
         "laravel": {
             "providers": [
-                "ThoughtCo\\StatamicCpResources\\ServiceProvider"
+                "Thoughtco\\StatamicCpresources\\ServiceProvider"
             ]
-        }
-    },
-    "require": {
-        "statamic/cms": "^3.3|^4.0"
-    },
-    "config": {
-        "allow-plugins": {
-            "pixelfear/composer-dist-plugin": true
         }
     }
 }

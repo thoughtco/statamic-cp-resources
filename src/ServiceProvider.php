@@ -1,6 +1,6 @@
 <?php
 
-namespace Thoughtco\StatamicCpResources;
+namespace Thoughtco\StatamicCpresources;
 
 use Statamic\Facades\CP\Nav;
 use Statamic\Facades\Permission;
@@ -9,12 +9,13 @@ use Statamic\Statamic;
 
 class ServiceProvider extends AddonServiceProvider
 {
+    
     protected $routes = [
         'cp' => __DIR__.'/../routes/cp.php',
     ];
 
     public function bootAddon()
-    {
+    {                
         $this->mergeConfigFrom(__DIR__.'/../config/client-dashboard.php', 'thoughtco.client-dashboard');
 
         $this->publishes([
@@ -23,7 +24,7 @@ class ServiceProvider extends AddonServiceProvider
 
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'thoughtco-cpresources');
 
-        Statamic::booted(function () {
+       // Statamic::booted(function () {
             Nav::extend(function ($nav) {
                 $nav->content(config('thoughtco.client-dashboard.nav.title', 'Resources'))
                     ->section(config('thoughtco.client-dashboard.nav.section', 'Thought Collective'))
@@ -34,6 +35,6 @@ class ServiceProvider extends AddonServiceProvider
 
             Permission::register('view '.strtolower(config('thoughtco.client-dashboard.nav.title')))
                 ->label('View '.config('thoughtco.client-dashboard.nav.title'));
-        });
+       // });
     }
 }
