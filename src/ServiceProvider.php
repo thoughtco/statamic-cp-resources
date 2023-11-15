@@ -17,6 +17,12 @@ class ServiceProvider extends AddonServiceProvider
     {
         parent::boot();
 
+        $this->mergeConfigFrom(__DIR__.'/../config/client-dashboard.php', 'thoughtco.client-dashboard');
+        
+        $this->publishes([
+            __DIR__.'/../config/client-dashboard.php' => config_path('thoughtco/client-dashboard.php'),
+        ], 'client-dashboard-config');
+
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'statamic-cp-resources');
 
         Statamic::booted(function () {

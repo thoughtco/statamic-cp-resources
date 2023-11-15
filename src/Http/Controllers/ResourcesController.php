@@ -14,9 +14,9 @@ class ResourcesController extends CpController
         }
 
         return view('statamic-cpresources::index', [
-            'trelloUrl' => config('statamic-cpresources.trello_url'),
-            'looms' => config('statamic-cpresources.looms'),
-            'additionalResources' => config('statamic-cpresources.additional_resources'),
+            'trelloUrl' => config('client-dashboard.trello_url'),
+            'looms' => config('client-dashboard.looms'),
+            'additionalResources' => config('client-dashboard.additional_resources'),
         ]);
     }
 }
