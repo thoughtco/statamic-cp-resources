@@ -24,17 +24,16 @@ class ServiceProvider extends AddonServiceProvider
 
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'thoughtco-cpresources');
 
-       // Statamic::booted(function () {
-            Nav::extend(function ($nav) {
-                $nav->content(config('thoughtco.client-dashboard.nav.title', 'Resources'))
-                    ->section(config('thoughtco.client-dashboard.nav.section', 'Thought Collective'))
-                    ->route('cpresources.index')
-                    ->icon('pin')
-                    ->can('view resources');
-            });
+        Nav::extend(function ($nav) {
+            $nav->content(config('thoughtco.client-dashboard.nav.title', 'Resources'))
+                ->section(config('thoughtco.client-dashboard.nav.section', 'Thought Collective'))
+                ->route('cpresources.index')
+                ->icon('pin')
+                ->can('view resources');
+        });
 
-            Permission::register('view '.strtolower(config('thoughtco.client-dashboard.nav.title')))
-                ->label('View '.config('thoughtco.client-dashboard.nav.title'));
-       // });
+        Permission::register('view '.strtolower(config('thoughtco.client-dashboard.nav.title')))
+            ->label('View '.config('thoughtco.client-dashboard.nav.title'));
+
     }
 }
