@@ -14,7 +14,7 @@ class ResourcesController extends CpController
             abort(403);
         }
 
-        return view('statamic-cpresources::index', [
+        return view('statamic-cp-resources::index', [
             'trelloUrl' => config('thoughtco.client-dashboard.trello_url'),
             'looms' => config('thoughtco.client-dashboard.looms'),
             'additionalResources' => config('thoughtco.client-dashboard.additional_resources'),
