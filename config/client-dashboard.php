@@ -7,7 +7,7 @@ return [
         'title' => 'Resources',
     ],
 
-    'trello_url' => 'https://trello.com/b/uLZV3PP0/issue-reporting-client',
+    'trello_url' => '',
 
     /**
      * Configure Loom videos to be displayed on the dashboard.
@@ -17,15 +17,15 @@ return [
      */
     'looms' => [
         [
-            'name' => 'Tour of the Statamic Control Panel',
-            'embed_url' => 'https://www.loom.com/embed/55d55888vb7540c69c0e46e5ddeb6999',
+            'name' => '',
+            'embed_url' => '',
         ],
     ],
 
     'additional_resources' => [
         // [
-        //     'name' => 'How to use Trello',
-        //     'url' => 'https://thoughtcollective.com',
+        //     'name' => '',
+        //     'url' => ',
         // ],
     ],
 
