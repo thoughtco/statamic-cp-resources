@@ -9,13 +9,13 @@ use Statamic\Statamic;
 
 class ServiceProvider extends AddonServiceProvider
 {
-    
+
     protected $routes = [
         'cp' => __DIR__.'/../routes/cp.php',
     ];
 
     public function bootAddon()
-    {                
+    {
         $this->mergeConfigFrom(__DIR__.'/../config/client-dashboard.php', 'thoughtco.client-dashboard');
 
         $this->publishes([

@@ -8,12 +8,12 @@ use Statamic\Http\Controllers\CP\CpController;
 class ResourcesController extends CpController
 {
     public function __invoke()
-    {        
-                
+    {
+
         if (! User::current()->can('view '.strtolower(config('thoughtco.client-dashboard.nav.title')))) {
             abort(403);
         }
-        
+
         return view('statamic-cpresources::index', [
             'trelloUrl' => config('thoughtco.client-dashboard.trello_url'),
             'looms' => config('thoughtco.client-dashboard.looms'),
